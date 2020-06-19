@@ -48,6 +48,10 @@
         <div id="line"></div>
         <div id="form">
             <div class="row">
+                <!-- <form action="/input" method="POST">
+                    <input type="text" name="val" />
+                    <input type="submit" />
+                </form> -->
                 <form class="col s12" action="/input" method="GET">
                     <div class="row">
                         <div class="input-field col s12">
@@ -60,26 +64,26 @@
 
                     <div class="row">
                         <div class="input-field col s6">
-                            <input placeholder="For eg: 1" id="range_low" name="range_low" type="number" class="validate">
+                            <input placeholder="For eg: 1" id="range_low" name="range_low" type="text" class="validate">
                             <label for="first_name">Low</label>
                             <span class="helper-text" data-error="wrong" data-success="right">Enter the lower range (inclusive)</span>
 
                         </div>
                         <div class="input-field col s6">
-                            <input placeholder="For eg: 8888" id="range_high" name="range_high" type="number" class="validate">
+                            <input placeholder="For eg: 8888" id="range_high" name="range_high" type="text" class="validate">
                             <label for="last_name">High</label>
                             <span class="helper-text" data-error="wrong" data-success="right">Enter the higher range (exclusive)</span>
 
                         </div>
                     </div>
                     <div>
-                        <a id="scan-port-button"class="waves-effect waves-teal  teal lighten-3 btn-flat" onclick="scan_port()">Scan Now</a>
-                        <!-- <input type="button" name="form" value="Submit"> -->
+                        <!-- <a id="scan-port-button"class="waves-effect waves-teal  teal lighten-3 btn-flat" onclick="scan_port()">Scan Now</a> -->
+                        <input type="submit" name="form" value="Submit" >
                     </div>
                 </form>
-                <h3>{{ host }}</h3>
-                <h3>{{ range_low }}</h3>
-                <h3>{{ range_high }}</h3>
+                <h3> {{ host }}</h3>
+                <h3> {{ range_low }}</h3>
+                <h3> {{ range_high }}</h3>
             </div>
         </div>
     </div>
@@ -94,7 +98,11 @@
             <label id="seconds">00</label>
         </div>
     </div>
-
+<script>
+    function scan() {
+        window.location.href = '/input'
+    }
+</script>
 
 </body>
 
