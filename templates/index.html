@@ -48,7 +48,7 @@
         <div id="line"></div>
         <div id="form">
             <div class="row">
-                <form class="col s12" action="/input" method="POST">
+                <form class="col s12" action="/input" method="GET">
                     <div class="row">
                         <div class="input-field col s12">
                             <input id="host" type="text" name="host" class="validate" placeholder="For eg: google.com">
@@ -74,9 +74,12 @@
                     </div>
                     <div>
                         <a id="scan-port-button"class="waves-effect waves-teal  teal lighten-3 btn-flat" onclick="scan_port()">Scan Now</a>
+                        <!-- <input type="button" name="form" value="Submit"> -->
                     </div>
                 </form>
-                {{ list }}
+                <h3>{{ host }}</h3>
+                <h3>{{ range_low }}</h3>
+                <h3>{{ range_high }}</h3>
             </div>
         </div>
     </div>
