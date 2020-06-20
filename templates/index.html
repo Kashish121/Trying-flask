@@ -52,7 +52,7 @@
                     <input type="text" name="val" />
                     <input type="submit" />
                 </form> -->
-                <form class="col s12" action="/input" method="GET">
+                <form class="col s12" action="/input" method="POST">
                     <div class="row">
                         <div class="input-field col s12">
                             <input id="host" type="text" name="host" class="validate" placeholder="For eg: google.com">
@@ -84,6 +84,8 @@
                 <h3> {{ host }}</h3>
                 <h3> {{ range_low }}</h3>
                 <h3> {{ range_high }}</h3>
+                <h3> {{ portnum }}</h3>
+
             </div>
         </div>
     </div>

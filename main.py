@@ -9,10 +9,10 @@ app = Flask(__name__)
 def homepage():
     return render_template('index.html')
 
-@app.route('/input', methods=["GET", "POST"])
+@app.route('/input', methods=["POST"])
 
 def input():
-    if request.method == "GET":
+    if request.method == "POST":
         # val = request.form["val"]
         host = request.form["host"]
         range_low = request.form["range_low"]
@@ -23,7 +23,7 @@ def input():
         return render_template('index.html', host=host, range_low=range_low, range_high=range_high)
         # return redirect(url_for('input'))
         # return '%s %s %s' %(host, range_low, range_high)
-    # return render_template('index.html')
+    return render_template('index.html')
 
 
 if __name__ == '__main__':
