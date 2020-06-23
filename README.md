@@ -37,6 +37,7 @@ venv\Scripts\activate
 4. Run 'mainScanner.py,
 
 ```js
+pip install flask
 python mainScanner.py
 ```
 
